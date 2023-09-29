@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> ThriveBookstore Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\site.css">
+
+
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                <img src="~/images/logo.png" width="30px" height="30" alt="">
+                Thrive Bookstore
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+              aria-expanded="false" aria-label="toggle-navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="nav-bar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                      <a href="" class="btn btn-outline-primary">Login</a>
+                      <a href="" class="btn btn-primary">Register</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-dark">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="/home/about" class="nav-link text-dark">About</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="/home/contactUs" class="nav-link text-dark">Contact</a>
+               </li>
+                <li class="nav-item">
+                  <a href="/book/getallbooks" class="nav-link text-dark">All Books</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        </nav>
+
+  </header>
+  <main role="main">
+    @RenderBody()
+  </main>
+
+</body>
+</html>
