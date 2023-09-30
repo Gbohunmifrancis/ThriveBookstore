@@ -396,3 +396,4 @@ C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\Booksto
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\ref\BookstoreMVC.dll
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\Razor\Views\Home\ContactUs.cshtml.g.cs
+C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\Razor\Views\Book\GetBook.cshtml.g.cs

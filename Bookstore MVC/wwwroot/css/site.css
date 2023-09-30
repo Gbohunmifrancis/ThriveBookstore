@@ -12,15 +12,7 @@
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
+}
 
-}
-.book-row{
-  flex-basis: 31%;
-  background: #fff3f3;
-  border-radius: 10px;
-  margin-bottom: 5%;
-  padding: 20px 12px;
-  box-sizing: border-box;
-}
 
 

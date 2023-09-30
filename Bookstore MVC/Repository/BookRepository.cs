@@ -23,11 +23,11 @@ namespace BookstoreMVC.Repository
         {
             return new List<BookModel>()
             {
-                new BookModel() { Id = 1, Title = "MVC", Author = "Gbohunmi" },
-                new BookModel() { Id = 2, Title = "Go", Author = "Gbohunmi" },
-                new BookModel() { Id = 3, Title = "C#", Author = "Gbohunmi" },
-                new BookModel() { Id = 4, Title = "Java", Author = "Francis" },
-                new BookModel() { Id = 5, Title = "PHP", Author = "Francis" },
+                new BookModel() { Id = 1, Title = "MVC", Author = "Gbohunmi",Description="This is the description for MVC" },
+                new BookModel() { Id = 2, Title = "Go", Author = "Gbohunmi",Description="This is the description for GO" },
+                new BookModel() { Id = 3, Title = "C#", Author = "Gbohunmi",Description="This is the description for C#" },
+                new BookModel() { Id = 4, Title = "Java", Author = "Francis",Description="This is the description for Java" },
+                new BookModel() { Id = 5, Title = "PHP", Author = "Francis",Description="This is the description for PHP" },
             };
                 
             }
