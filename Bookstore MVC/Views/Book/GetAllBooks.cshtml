@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<BookstoreMVC.Models.BookModel>
-@{
-    Layout = "_Layout";
-}
-
+    @{
+        ViewData["Title"] = "All Books";
+    }
 <div class="container">
     <h3 class="display-4">All books</h3>
     <div class="row">
@@ -10,7 +9,7 @@
         {
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserve></svg>
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" preserve></svg>
                     <div class="card-body">
                         <h3 class="card-title">@book.Title</h3>
                         <p class="card-text">@book.Description</p>
