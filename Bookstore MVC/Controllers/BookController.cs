@@ -19,7 +19,7 @@ namespace BookstoreMVC.Controllers
             var data = _bookRepository.GetAllBooks();
             return View(data);
         }
-        public ViewResult GetBook(int id)
+        public ViewResult GetBook(int id, string nameOfBook)
         {
             var data = _bookRepository.GetBookById(id);
             return View(data);

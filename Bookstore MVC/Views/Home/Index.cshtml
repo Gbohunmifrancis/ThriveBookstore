@@ -1,23 +1,58 @@
 ﻿@{
-    Layout = "_Layout";
-    }
-    <link rel="stylesheet" href="css\site.css">
+    ViewData["Title"] = "Home";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Water+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
     <section class="jumbotron text-center">
         <div class="container">
             <h1>Welcome to Thrive Bookstore</h1>
-                <p class="lead text-muted">
-                    - Your Source for Inspiration and Knowledge
-
-                        we're not just a place to find books; we're a gateway to new worlds, fresh perspectives, and boundless learning. Whether you're seeking spiritual enlightenment, motivation to conquer life's challenges, or the tools to expand your horizons, you've come to the right place.
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">Search books</a>
-                    </p>
-                </p>
-            </h1>
+            <p class="lead text">
+                Your Source for Inspiration and Knowledge - we're not just a place to find books; we're a gateway to new worlds, fresh perspectives, and boundless learning. Whether you're seeking spiritual enlightenment, motivation to conquer life's challenges, or the tools to expand your horizons, you've come to the right place.
+            </p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Search books</a>
+            </p>
         </div>
     </section>
 
 
 
-    
+        
+    <style>
+        body {
+            background-image: url('../images/background.jpeg');
+            background-size: cover; /* Ensures the image covers the entire viewport */
+            background-repeat: no-repeat; /* Prevents repeating the image */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            position: relative;
+        }
+        h1, p{
+            color: white;
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+               body::before {
+                    content: "rt";
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../images/background.jpeg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    filter: blur(5px); /* Adjust the blur radius as needed */
+                    z-index: -1; /* Place it behind the content */
+               }
+                
+  </style>
 
+
+</body>
+</html>
