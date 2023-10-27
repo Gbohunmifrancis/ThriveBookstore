@@ -1,37 +1,89 @@
-﻿using BookstoreMVC.Models;
+﻿using BookstoreMVC.Data;
+using BookstoreMVC.Models;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace BookstoreMVC.Repository
 {
     public class BookRepository
     {
-        public List<BookModel> GetAllBooks()
+        private readonly BookStoreContext _context = null;
+
+        public BookRepository(BookStoreContext context)
         {
-            return DataSource(); 
+            _context = context;
         }
 
-        public BookModel GetBookById(int id)
+
+        public async Task<int> AddNewBook(BookModel model)
         {
-            return DataSource().Where(x => x.Id ==id).FirstOrDefault();
+
+            var newBook = new Books()
+            {
+                Author = model.Author,
+                CreatedOn = DateTime.UtcNow,
+                Description = model.Description,
+                Title = model.Title,
+                TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
+                UpdatedOn = DateTime.UtcNow
+            };
+
+            await _context.Books.AddAsync(newBook);
+            await _context.SaveChangesAsync();
+
+            return newBook.Id;
         }
+
+        public async Task<List<BookModel>> GetAllBooks()
+        {
+            var books = new List<BookModel>();
+            var allbooks = await _context.Books.ToListAsync();
+            if (allbooks?.Any() == true)
+            {
+                foreach (var book in allbooks)
+                {
+                    books.Add(new BookModel()
+                    {
+                        Author = book.Author,
+                        Description = book.Description,
+                        Title = book.Title,
+                        Id = book.Id,
+                        TotalPages = book.TotalPages
+
+
+                    });
+                }
+            }
+            return books;
+        }
+
+        public async Task<BookModel> GetBookById(int id)
+        {
+            return await _context.Books.Where(x => x.Id == id)
+                .Select(book => new BookModel()
+                {
+                    Author = book.Author,
+                    Description = book.Description,
+                    Title = book.Title,
+                    Id = book.Id,
+                    TotalPages = book.TotalPages
+                }).FirstOrDefaultAsync();
+        }
+                
+           
+         
+
         public List<BookModel> SearchBook(string title, string authorName)
         {
-            return DataSource().Where(x => x.Title.Contains(title) && x.Author.Contains(authorName)).ToList();
+            return null;
         }
-        private List<BookModel> DataSource()
-        {
-            return new List<BookModel>()
-            {
-                new BookModel() { Id = 1, Title = "MVC", Author = "Gbohunmi",Description="This is the description for MVC",Category="Programming", Language="English",TotalPages=134 },
-                new BookModel() { Id = 2, Title = "Go", Author = "Gbohunmi",Description="This is the description for GO",Category="Programming", Language="Yoruba",TotalPages=455 },
-                new BookModel() { Id = 3, Title = "C#", Author = "Gbohunmi",Description="This is the description for C#",Category="Programming", Language="Igbo",TotalPages=566 },
-                new BookModel() { Id = 4, Title = "Java", Author = "Francis",Description="This is the description for Java",Category="Programming", Language="Hausa",TotalPages=566 },
-                new BookModel() { Id = 5, Title = "PHP", Author = "Francis",Description="This is the description for PHP",Category="Programming", Language="Swahili",TotalPages=677 },
-                new BookModel() { Id = 6, Title = "How to make money on Fiverr", Author = "Olamoney",Description="This is the description for the book on Fiverr",Category="Selling", Language="English",TotalPages=678 },
-            };
-                
-            }
-        }
+        
     }
+}
+       
+
 

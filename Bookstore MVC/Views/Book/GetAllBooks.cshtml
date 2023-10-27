@@ -1,8 +1,8 @@
-﻿@using BookstoreMVC.Models 
-@model IEnumerable<BookModel>
+﻿@using BookstoreMVC.Models
     @{
         ViewData["Title"] = "All Books";
     } 
+ 
 <div class="container">
     <h3 class="display-4">All books</h3>
     <div class="row">
@@ -16,7 +16,7 @@
                         <p class="card-text">@book.Description</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a class="btn btn-sm btn-outline-secondary" asp-controller="book" asp-action="getbook" asp-route-id="@book.Id">View details</a>
+                                <a class="btn btn-sm btn-outline-secondary" href="/book/getbook/@book.Id" asp-route-id="book.Id" asp-route="bookDetailsRoute">View details</a>
                             </div>
                             <small class="text-muted">@book.Author</small>
                         </div>
