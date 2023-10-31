@@ -1,11 +1,10 @@
 ﻿using BookstoreMVC.Data;
 using BookstoreMVC.Models;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BookstoreMVC.Repository
 {
@@ -73,17 +72,17 @@ namespace BookstoreMVC.Repository
                     TotalPages = book.TotalPages
                 }).FirstOrDefaultAsync();
         }
-                
-           
-         
+
+
+
 
         public List<BookModel> SearchBook(string title, string authorName)
         {
             return null;
         }
-        
+
     }
 }
-       
+
 
 

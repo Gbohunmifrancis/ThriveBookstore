@@ -7,7 +7,7 @@ namespace BookstoreMVC.Controllers
         public ViewResult Index()
         {
             ViewData["property1"] = "Francis Gbohunmi";
-            return View(); 
+            return View();
         }
 
 
