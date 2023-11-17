@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NETCORE_VERSION: 5.0
+      NETCORE_VERSION: 5.0.3
 
     steps:
     - name: Checkout code
