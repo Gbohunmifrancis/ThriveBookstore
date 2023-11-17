@@ -1,8 +1,7 @@
+@using  BookstoreMVC.Enums
 @model BookModel
-@using BookstoreMVC.Enums
 @{
     ViewData["Title"] = "Add new book";
-    
 }
 <div class="container">
     <h3 class="display-4">Add new book</h3>
@@ -17,50 +16,61 @@
             </button>
         </div>
     }
-    
 
     <form method="post" enctype="multipart/form-data" asp-action="AddNewBook" asp-controller="Book">
-       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
 
         <div class="form-group">
-            <label asp-for="Title" class="control-label">Title</label>
-            <input asp-for="Title" class="form-control" />
-            <span asp-validation-for="Title" class="text-danger"></span>
-        </div>
-
-
-        <div class="form-group">
-            <label asp-for="Author" class="control-label">Author</label>
+            <label asp-for="Author" class="control-label"></label>
             <input asp-for="Author" class="form-control" />
             <span asp-validation-for="Author" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-        
-            <label asp-for="Description" class="control-label">Description</label>
+            <label asp-for="Description" class="control-label"></label>
             <textarea asp-for="Description" class="form-control"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-        
-            <label asp-for="TotalPages">TotalPages</label>
+            <label asp-for="TotalPages" class="control-label"></label>
             <input asp-for="TotalPages" class="form-control" />
             <span asp-validation-for="TotalPages" class="text-danger"></span>
         </div>
 
-         <div class="form-group">
-            <label asp-for="CoverPhoto" class="control-label">CoverPhoto</label>
+        <div class="form-group">
+            <label asp-for="CoverPhoto" class="control-label"></label>
             <div class="custom-file">
-                <input asp-for="CoverPhoto" class="custom-file-input" id="customFile" />
-                <label class="custom-file-label" for="customFile">Choose File</label>
+                <input asp-for="CoverPhoto" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
             <span asp-validation-for="CoverPhoto" class="text-danger"></span>
-            
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Add book" class="btn btn-primary">
+            <label asp-for="GalleryFiles" class="control-label"></label>
+            <div class="custom-file">
+                <input asp-for="GalleryFiles" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <span asp-validation-for="GalleryFiles" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BookPdf" class="control-label"></label>
+            <div class="custom-file">
+                <input asp-for="BookPdf" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <span asp-validation-for="BookPdf" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add book" class="btn btn-primary" />
         </div>
     </form>
 </div>

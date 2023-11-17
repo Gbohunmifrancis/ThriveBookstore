@@ -1,32 +1,18 @@
-﻿@using BookstoreMVC.Models
-@* @using BookstoreMVC.DataIEnumerable<BookModel> *@
+﻿@{
+    ViewData["Title"] = "All books";
+}
 @model IEnumerable<BookModel>
-    @{
-        ViewData["Title"] = "All Books";
-    } 
- 
+
 <div class="container">
     <h3 class="display-4">All books</h3>
     <div class="row">
+
         @foreach (var book in Model)
         {
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidyMid slice"></svg>
-                    <div class="card-body">
-                        <h3 class="card-title">@book.Title</h3>
-                        <p class="card-text">@book.Description</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a class="btn btn-sm btn-outline-secondary" href="/book/getbook/@book.Id">View details</a>
-                            </div>
-                            <small class="text-muted">@book.Author</small>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_bookThumbnail" model="@book" />
             </div>
         }
+
     </div>
 </div>
-
-

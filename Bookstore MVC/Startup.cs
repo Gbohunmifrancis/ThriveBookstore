@@ -10,6 +10,13 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        services.Configure<IISServerOptions>(options =>
+        {
+            options.MaxRequestBodySize = 104857600; // 100MB
+        });
+
+    
+
         services.AddDbContext<BookStoreContext>(
             Options => Options.UseSqlServer("Server=.;Database=BookStore;Integrated Security=True;"));
         services.AddControllersWithViews();
@@ -50,5 +57,4 @@ public class Startup
 
     }
 }
-
 

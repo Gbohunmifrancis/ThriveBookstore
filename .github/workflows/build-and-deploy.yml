@@ -1,0 +1,46 @@
+name: "thrivebookstore"
+
+on:
+  push:
+    branches:
+      - main  # Adjust this based on your main branch name
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    env:
+      NETCORE_VERSION: 5.0
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core SDK ${{ env.NETCORE_VERSION }}
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.NETCORE_VERSION }}
+
+    # Add your build steps here
+    - name: Restore
+      run: dotnet build
+
+    - name: Build
+      run: dotnet restore --no-restore -c Release
+
+    - name: Publish
+      run: dotnet publish -c Release -o ./Published
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Azure Web App Deploy
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: '<thrive>'  # Replace with your Azure Web App name
+        slot-name: 'production'  # Replace with your deployment slot name (optional)
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ./Published

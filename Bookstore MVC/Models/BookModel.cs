@@ -1,5 +1,6 @@
 ﻿using BookstoreMVC.Helpers;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BookstoreMVC.Models
@@ -29,5 +30,16 @@ namespace BookstoreMVC.Models
          [Display(Name = "choose the cover photo of your book")]
          [Required]
         public IFormFile CoverPhoto { get; set; }
+        
+        public string CoverImageUrl { get; set; }
+
+        public IFormFileCollection GalleryFiles { get; set; }
+
+        public List<GalleryModel> Gallery { get; set; }
+        [Display(Name = "upload your book in PDF format")]
+        [Required]
+        public IFormFile BookPdf { get; set; }
+
+        public string BookPdfUrl { get; set; }
     }
 }
