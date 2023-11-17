@@ -10,9 +10,6 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
 
-    env:
-      NETCORE_VERSION: 5.0
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -38,7 +35,7 @@ jobs:
     - name: Azure Web App Deploy
       uses: azure/webapps-deploy@v2
       with:
-        app-name: '<thrivebooks>'  # Replace with your Azure Web App name
+        app-name: '<thrive>'  # Replace with your Azure Web App name
         slot-name: 'production'  # Replace with your deployment slot name (optional)
         publish-profile: ${{ secrets.MY_SECRET_BOOKS }}
         package: ./Published
