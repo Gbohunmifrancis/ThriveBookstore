@@ -21,8 +21,8 @@ jobs:
           dotnet-version: ${{ env.NETCORE_VERSION }}
 
       # Add your build steps here
-      - name: Restore
-        run: dotnet restore
+      # - name: Restore
+      #   run: dotnet restore
 
       - name: Build
         run: dotnet build --no-restore -c Release
