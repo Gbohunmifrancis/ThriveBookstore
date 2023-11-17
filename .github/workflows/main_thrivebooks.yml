@@ -27,6 +27,11 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release -o ./Published
 
+    - name: Install Azure CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y azure-cli
+
     - name: Azure Login
       uses: azure/login@v1
       with:
