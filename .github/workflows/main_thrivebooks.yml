@@ -19,10 +19,10 @@ jobs:
 
     # Add your build steps here
     - name: Restore
-      run: dotnet build
+      run: dotnet restore
 
     - name: Build
-      run: dotnet restore --no-restore -c Release
+      run: dotnet build -c Release
 
     - name: Publish
       run: dotnet publish -c Release -o ./Published
