@@ -5,7 +5,7 @@ on: [push]
 env:
   AZURE_WEBAPP_NAME: af-linuxapp
   AZURE_WEBAPP_PACKAGE_PATH: './Published'
-  NETCORE_VERSION: '3.1.101'
+  NET_VERSION: '5.0.17'
     
 jobs:
   build:
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK ${{ env.NETCORE_VERSION }}
+      - name: Setup .NET Core SDK ${{ env.NET_VERSION }}
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: ${{ env.NETCORE_VERSION }}
+          dotnet-version: ${{ env.NET_VERSION }}
 
       # Add your build steps here
       - name: Restore
