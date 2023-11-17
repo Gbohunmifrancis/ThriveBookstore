@@ -393,3 +393,4 @@ C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\refint\
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\BookstoreMVC.pdb
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\BookstoreMVC.genruntimeconfig.cache
 C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\ref\BookstoreMVC.dll
+C:\Users\ISTOP\source\repos\Bookstore MVC\Bookstore MVC\obj\Debug\net5.0\Razor\Views\Shared\_bookThumnail.cshtml.g.cs
