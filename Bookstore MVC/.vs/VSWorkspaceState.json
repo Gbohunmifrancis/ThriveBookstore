@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\bin",
+    "\\bin\\Debug",
+    "\\Views",
+    "\\Views\\Book"
   ],
-  "SelectedNode": "\\Controllers\\BookController.cs",
+  "SelectedNode": "\\Views\\Book\\AddNewBook.cshtml",
   "PreviewInSolutionExplorer": false
 }
