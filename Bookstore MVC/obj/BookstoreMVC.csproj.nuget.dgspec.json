@@ -53,7 +53,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.3.3, )"
+              "version": "[3.3.5-beta1.23270.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

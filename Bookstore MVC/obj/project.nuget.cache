@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ii5wP3uNY8Si5eOS8NtjQQKf7QpCPaVA1ibp864ainx29/XatUIKPpsYENGHGB5572b0ICDfOkWN7oMvg4TApA==",
+  "dgSpecHash": "HNXUBysV5N4ijBbEpptkpAW3cqXfKtPYBnv6jaW/GwlsCUDxyW6E6ycPSpWchxr3eOJouXwQXVExLVJsb4o40g==",
   "success": true,
   "projectFilePath": "C:\\Users\\ISTOP\\source\\repos\\Bookstore MVC\\Bookstore MVC\\BookstoreMVC.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\8.0.0\\microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.0.nupkg.sha512",
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
-    "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
+    "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.5-beta1.23270.2\\microsoft.codeanalysis.analyzers.3.3.5-beta1.23270.2.nupkg.sha512",
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0\\microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ISTOP\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\4.5.0\\microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",

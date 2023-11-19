@@ -16,12 +16,12 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.web.librarymanager.build\2.1.175\build\Microsoft.Web.LibraryManager.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.web.librarymanager.build\2.1.175\build\Microsoft.Web.LibraryManager.Build.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.0\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.0\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.3\build\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.3\build\Microsoft.CodeAnalysis.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.5-beta1.23270.2\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.5-beta1.23270.2\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\8.0.0\build\net8.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\8.0.0\build\net8.0\Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Web_LibraryManager_Build Condition=" '$(PkgMicrosoft_Web_LibraryManager_Build)' == '' ">C:\Users\ISTOP\.nuget\packages\microsoft.web.librarymanager.build\2.1.175</PkgMicrosoft_Web_LibraryManager_Build>
-    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\ISTOP\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\ISTOP\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.5-beta1.23270.2</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\ISTOP\.nuget\packages\microsoft.entityframeworkcore.tools\8.0.0</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
 </Project>
