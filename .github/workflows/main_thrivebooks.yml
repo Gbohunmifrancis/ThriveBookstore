@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AZURE_WEBAPP_NAME: af-linuxapp
+  AZURE_WEBAPP_NAME: thrivebooks
   AZURE_WEBAPP_PACKAGE_PATH: './Published'
   NETCORE_VERSION: '8.0'
 
