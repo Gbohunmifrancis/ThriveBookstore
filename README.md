@@ -1,4 +1,3 @@
-Certainly, here's a template for a README for your ThriveBookstore application. You can customize it to fit the specific details and requirements of your project:
 
 # ThriveBookstore Application
 
